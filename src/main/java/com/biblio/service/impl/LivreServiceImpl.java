@@ -1,4 +1,4 @@
-package com.biblio.service.Impl;
+package com.biblio.service.impl;
 
 public class LivreServiceImpl {
 }

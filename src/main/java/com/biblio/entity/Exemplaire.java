@@ -3,8 +3,13 @@ package com.biblio.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity @Data @NoArgsConstructor @AllArgsConstructor @Builder
+import java.util.HashSet;
+import java.util.Set;
+
+@Entity
+@Data @NoArgsConstructor @AllArgsConstructor @Builder
 public class Exemplaire {
+
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idExemplaire;
 
@@ -16,4 +21,10 @@ public class Exemplaire {
     @ManyToOne
     @JoinColumn(name="isbn")
     private Livre livre;
+
+    @OneToMany(mappedBy = "exemplaire")
+    private Set<Emprunt> emprunts = new HashSet<>();
+
+    @OneToMany(mappedBy = "exemplaire")
+    private Set<Reservation> reservations = new HashSet<>();
 }

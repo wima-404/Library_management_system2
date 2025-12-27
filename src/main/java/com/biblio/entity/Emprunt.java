@@ -5,14 +5,16 @@ import lombok.*;
 
 import java.time.LocalDate;
 
-@Entity @Data @NoArgsConstructor @AllArgsConstructor @Builder
+@Entity
+@Data @NoArgsConstructor @AllArgsConstructor @Builder
 public class Emprunt {
+
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idEmprunt;
 
     private LocalDate dateEmprunt;
     private LocalDate dateRetourPrevue;
-    private LocalDate dateRetourEffective; // null => non retourné
+    private LocalDate dateRetourEffective;
 
     @ManyToOne
     private Utilisateur utilisateur;

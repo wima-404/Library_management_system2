@@ -1,4 +1,5 @@
 package com.biblio.dto.request;
 
-public class EmpruntRequestDTO {
-}
+import java.time.LocalDate;
+
+public record EmpruntRequestDTO(Long idUtilisateur, String codeExemplaire, LocalDate dateRetourPrevue) {}

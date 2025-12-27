@@ -1,4 +1,3 @@
 package com.biblio.dto.request;
 
-public class ReservationRequestDTO {
-}
+public record ReservationRequestDTO(Long idUtilisateur, String codeExemplaire) {}

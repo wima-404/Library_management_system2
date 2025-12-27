@@ -13,6 +13,6 @@ public class SwaggerConfig {
                 .info(new Info()
                         .title("API Bibliothèque")
                         .version("1.0")
-                        .description("Backend Library Management System"));
+                        .description(" Library Management System - Backend"));
     }
 }
